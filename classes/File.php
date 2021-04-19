@@ -1,7 +1,9 @@
 <?php
     class File {
         public function getFileExtension($fileName){
-            return $extension = @strtolower(end(explode('.', $fileName)));
+            $fileNameExtension = explode('.', $fileName);
+
+            return $extension = end($fileNameExtension);
         }
 
         public function changeFileName($extension){
